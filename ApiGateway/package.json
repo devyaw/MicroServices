@@ -1,5 +1,5 @@
 {
-  "name": "identity",
+  "name": "gateway",
   "version": "1.0.0",
   "description": "",
   "main": "./src/server.js",
@@ -19,23 +19,12 @@
     }
   },
   "type": "module",
-  "dependencies": {
-    "argon2": "^0.45.1",
-    "cors": "^2.8.6",
-    "deep-email-validator": "^0.1.27",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "express-rate-limit": "^8.6.2",
-    "helmet": "^8.3.0",
-    "ioredis": "^6.0.0",
-    "joi": "^18.2.3",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.9.2",
-    "rate-limit-redis": "^6.0.1",
-    "rate-limiter-flexible": "^11.2.0",
-    "winston": "^3.19.0"
-  },
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-http-proxy": "^2.1.2"
   }
 }

@@ -8,6 +8,8 @@ import { rateLimit } from 'express-rate-limit'
 import ioredis from 'ioredis'
 import redisStore from 'rate-limit-redis'
 import { RateLimiterMemory } from 'rate-limiter-flexible'
+import userRoutes from './Routes/user-routes.js'
+
 
 const app = express()
 
@@ -64,6 +66,9 @@ app.use((req, res, next) => {
 })
 
 connectDb()
+
+app.use('/api/auth', userRoutes)
+
 
 const port = process.env.PORT
 

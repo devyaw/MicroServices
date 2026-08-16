@@ -20,3 +20,5 @@ const generateToken = async (user) => {
 
   return { jwtToken, token }
 }
+
+export default generateToken

@@ -10,10 +10,13 @@ const userSchema = new mongoose.Schema({
 userSchema.index({ username: "text" })
 
 userSchema.pre("save", async function () {
+
   try {
     this.password = await argon2.hash(this.password);
+
   } catch (error) {
     throw error;
+
   }
 })
 
@@ -22,7 +25,7 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
     return await argon2.verify(this.password, candidatePassword);
   } catch (error) {
     console.error(error);
-    return false;
+    throw error;
   }
 };
 
