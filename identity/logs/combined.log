@@ -1,0 +1,15 @@
+{
+  message: 'Sign up request received',
+  level: 'info',
+  timestamp: '2026-08-21T20:29:02.550Z'
+}
+{
+  message: 'Sign in request received',
+  level: 'info',
+  timestamp: '2026-08-21T20:29:13.699Z'
+}
+{
+  message: 'Sign in request received',
+  level: 'info',
+  timestamp: '2026-08-21T20:47:03.619Z'
+}

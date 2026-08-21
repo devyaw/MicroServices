@@ -7,6 +7,7 @@ import { rateLimit } from "express-rate-limit"
 import RedisStore from "rate-limit-redis"
 import { RateLimiterMemory } from "rate-limiter-flexible";
 import connectMongoDB from "./Database/mongo-db.js"
+import postRoutes from "./Routes/post-routes.js"
 
 
 
@@ -69,6 +70,8 @@ app.use((req, res, next) => {
 })
 
 connectMongoDB()
+
+app.use('/api', postRoutes)
 
 
 
